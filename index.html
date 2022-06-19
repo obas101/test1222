@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="index.js"></script>
+
+		<style>
+			body {
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+			#internal-id {
+				color: orange;
+			}
+			.internal {
+				color: blue;
+			}
+			.test {
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background-color: black" class="test">
+			<h1 style="color: white;">My Calculator</h1>
+		</div>
+
+		<h2 style="text-align: center">Simple Interest Calculator</h2>
+		<div>
+            <form style="text-align: center
+            ">
+			<input id="principal" placeholder="Enter Principal" type="number" />
+			<input id="rate" placeholder="Enter Rate" type="number" />
+			<input id="time" placeholder="Enter Time" type="number" />
+			<button style="border-radius: 2px; height: 3rem" id="calculate" onclick="SimpleInterest(event)">Calculate</button>
+		</div>
+
+		<h1 style="text-align: center;" id="display"></h1>
+    </form>
+
+		<script>
+			function SimpleInterest(event) {
+                event.preventDefault()
+				let principal = document.getElementById("principal").value;
+				let rate = document.getElementById("principal").value;
+				let time = document.getElementById("principal").value;
+
+				let Si = ((principal * rate * time) / 100);
+				document.getElementById("display").innerHTML = `The result is ${Si}`;
+			}
+		</script>
+	</body>
+</html>
